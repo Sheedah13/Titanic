@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Titanic Lab</title>
+</head>
+<body>
+    <h1>Titanic Survival Prediction</h1>
+    <p>Welcome to the Titanic Survival Prediction app!</p>
+    <a href="/about">About page</a><br><br>
+
+    <form action="/predict" method="post">
+        <label for ="pclass">Passenger Class:</label>
+        <select id ="pclass" name="pclass" required>
+            <option value="1">1 - First Class</option>
+            <option value="2">2 - Second Class</option>
+            <option value="3">3 - Third Class</option>
+        </select><br><br>
+
+        <label for="sex">Sex:</label>
+        <select id ="sex" name="sex" required>
+            <option value="M">M - Male</option>
+            <option value="F">F - Female</option>
+        </select><br><br>
+
+        <label for ="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="100" step="1" required><br><br>
+
+        <label for ="sibsp">Siblings / Spouse aboard:</label>
+        <input type="number" id="sibsp" name="sibsp" min="0" max="10" value="0" required><br><br>
+
+        <label for ="parch">Parents / Children aboard:</label>
+        <input type="number" id="parch" name="parch" min="0" max="10" value="0" required><br><br>
+
+        <label for ="fare">Fare:</label>
+        <input type="number" id="fare" name="fare" min="0" step="0.01" required><br><br>
+
+        <label for="embarked">Port of Embarkation:</label>
+        <select id="embarked" name="embarked" required>
+            <option value="S">S - Southampton</option>
+            <option value="C">C - Cherbourg</option>
+            <option value="Q">Q - Queenstown</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+
+    </form>
+</body>
+</html>

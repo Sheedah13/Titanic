@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Titanic Lab - Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .box{
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+    .survived {
+      color: green;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .not-survived {
+      color: red;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    a {
+      display: block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Result Page</h1>
+
+        <p>The passenger class is: {{pclass}}</p>
+        <p>The sex is: {{sex}}</p>
+        <p>The age is: {{age}}</p>
+
+        <hr>
+
+
+        {% if result==  %}
+            <p class="survived">The passenger is predicted to have survived.</p>
+        {% else %}
+            <p class="not-survived">The passenger is predicted to have not survived.</p>
+        {% endif %}
+        <a href="/">Make another prediction</a>
+    </div>
+    </body>
+</html>
